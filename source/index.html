@@ -1,16 +1,120 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>
-        optmarket
-    </title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/png" href="images/icons/favicon.ico">
+        <link rel="stylesheet" href="css/style.min.css">
+        <title>
+            optmarket
+        </title>
+    </head>
 <body>
-    
+    <header class="header">
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="header-top__container">
+                    <div class="burger-menu">
+                        <span class="burger-menu__line"></span>
+                    </div>
+                    <nav class="nav">
+                        <ul class="menu">
+                            <li class="active"><a href="/">Главная</a></li>
+                            <li><a href="/">О нас</a></li>
+                            <li><a href="/">Доставка</a></li>
+                            <li><a href="/">Блог</a></li>
+                            <li><a href="/">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="address-group"> 
+                        <span class="address-group__text">г. Одесса,</span>
+                        <span class="address-group__text">Новомосковская дорога 23/1,</span>
+                        <span class="address-group__text">склад №4</span>
+                    </div>
+                    <div class="clock-group">  
+                        <span class="clock-group__text">Пн - Пт: с 9:00 до 17:00.</span>
+                        <span class="clock-group__text">Сб, Вс - выходные</span>
+                    </div>
+                </div>
+                <div class="header-mobile-menu mobile-menu__active">
+                    <nav class="nav">
+                        <ul class="menu">
+                            <li class="active"><a href="/">Главная</a></li>
+                            <li><a href="/">О нас</a></li>
+                            <li><a href="/">Доставка</a></li>
+                            <li><a href="/">Блог</a></li>
+                            <li><a href="/">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="clock-group">  
+                        <span class="clock-group__text">Пн - Пт: с 9:00 до 17:00.</span>
+                        <span class="clock-group__text">Сб, Вс - выходные</span>
+                    </div>
+                    <div class="phones-group">
+                        <span class="phones-group__label">
+                            Консультируйтесь с нами:
+                        </span>
+                        <a href="tel:+380735375787" class="phones-group__tel">+380 (73) 537-57-87</a>
+                        <a href="tel:+380955375787" class="phones-group__tel">+380 (95) 537-57-87</a>
+                    </div>
+                    <button type="button" class="button btn-main">
+                        Заказать звонок
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="wrapper">
+                <div class="header-bottom__container">
+                    <a href="/" class="logo-link">
+                        <img src="images/main/logo.png" alt="logo: Такелаж опт-маркет">
+                    </a>
+                    <div class="search">
+                        <input type="text" class="input-search">
+                        <button type="button" class="button button-search">
+                            <img src="images/icons/lupa.svg" alt="icon: search-lupa">
+                        </button>
+                    </div>
+                    <div class="phones-group">
+                        <span class="phones-group__label">
+                            Консультируйтесь с нами:
+                        </span>
+                        <a href="tel:+380735375787" class="phones-group__tel">+380 (73) 537-57-87</a>
+                        <a href="tel:+380955375787" class="phones-group__tel">+380 (95) 537-57-87</a>
+                    </div>
+                    <button type="button" class="button btn-main">
+                        Заказать звонок
+                    </button>
+                    <div class="switch_lange">
+                        <div class="lang_block">
+                            <div class="lang_active">
+                                RU
+                                <span class="arrow-tr"></span>
+                            </div>
+                            <ul class="lang_dropdown">
+                                <li>
+                                    <a href="#">
+                                        UA
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="/" class="auth">
+                        <img src="images/icons/user.svg" alt="icon: user">
+                    </a>
+                    <a href="#" class="basket">
+                        <div class="basket__images">
+                            <img src="images/icons/shopping-basket.svg" alt="icon: shopping basket">
+                            <div class="basket__counter">
+                                <span class="counter">1</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
