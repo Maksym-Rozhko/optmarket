@@ -1,9 +1,9 @@
 .main-screen {
     margin-top: 20px;
+    overflow: hidden;
 
     &__container {
         display: flex;
-        align-items: center;
 
         .products-catalog {
             max-width: 357px;
@@ -70,16 +70,24 @@
                     padding-left: 60px;
                 }
 
-                &>.parent {
+                .parent {
                     position: relative;
                 }
 
-                &>.parent {
+                .parent {
                     &:hover::after {
                         border: solid #282A30;
                         border-width: 0 1px 1px 0;
                         padding: 2px;
                         transform: rotate(135deg);
+                    }
+
+                    &:hover>.nav-child,
+                    .nav-child>.parent:hover>.nav-child {
+                        visibility: visible;
+                        opacity: 1;
+                        top: 0;
+                        overflow: visible;
                     }
                 }
 
@@ -87,7 +95,7 @@
                     border-bottom: 1px solid #F3F3F3;
                 }
 
-                &>.parent::after {
+                .parent::after {
                     content: "";
                     position: absolute;
                     border: solid #B6B6B6;
@@ -100,8 +108,24 @@
                     top: calc(50% - 4px);
                 }
 
-                .nav-child {
-                    display: none;
+                &>.parent>.nav-child,
+                .nav-child>.parent>.nav-child {
+                    position: absolute;
+                    background: #fff;
+                    box-shadow: 5px -3px 26px 4px rgba(0, 0, 0, .05);
+                    min-width: 315px;
+                    width: 100%;
+                    left: 100%;
+                    transition: all ease-in-out .4s;
+                    opacity: 0;
+                    visibility: hidden;
+                    padding-left: 25px;
+                    z-index: 11;
+
+                    li {
+                        padding-left: 0;
+                        padding-right: 26px;
+                    }
                 }
             }
         }
@@ -112,16 +136,13 @@
         position: relative;
 
         .swiper-slide {
-            width: 100%;
-            height: 100%;
             background: #D7423B;
         }
-
 
         .main-slider {
             &__item {
                 width: 1343px;
-                height: 607px;
+                height: 612px;
                 padding-top: 131px;
                 padding-left: 79px;
                 position: relative;
@@ -208,6 +229,68 @@
 
             .swiper-pagination-bullet.swiper-pagination-bullet-active {
                 background: #fff;
+            }
+        }
+    }
+}
+
+.choose-category {
+    margin-top: 100px;
+    margin-bottom: 142px;
+
+    &__title {
+        @include titleWithLine;
+    }
+
+    &__container {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__link {
+        max-width: 364px;
+        width: 100%;
+        height: 256px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        background: #fff;
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding-top: 10px;
+
+        .choose-category__label {
+            background: linear-gradient(225deg, transparent 30px, #282A30 0);
+            width: 100%;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 12px 0;
+            transition: all ease-in-out .4s;
+        }
+
+        &.double-images-item {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url('../images/main/cat-rigging-small.png') no-repeat center/cover;
+                width: 145px;
+                height: 145px;
+                right: 55px;
+                top: 15px;
+            }
+        }
+
+        &:hover {
+            .choose-category__label {
+                background-color: #282A30;
             }
         }
     }
