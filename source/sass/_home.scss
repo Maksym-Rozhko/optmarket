@@ -427,3 +427,98 @@
         }
     }
 }
+
+.info-block {
+    background: #282A30;
+    padding-top: 104px;
+    padding-bottom: 110px;
+    position: relative;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        color: #FFFFFF;
+        margin-top: 0;
+        margin-block-start: 0;
+        max-width: 411px;
+        width: 100%;
+        padding-bottom: 51px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            border-bottom: 3px solid #D7423B;
+            width: 168px;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__items {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 238px;
+        max-width: 238px;
+        width: 100%;
+        height: 339px;
+        padding-top: 54px;
+        padding-left: 13px;
+        padding-right: 13px;
+        padding-bottom: 43px;
+        background: linear-gradient(125deg, transparent 30px,rgba(255, 255, 255, .04) 0);
+        transition: all ease-in-out .4s;
+
+        .icon {
+            width: 41px;
+            height: 41px;
+            fill: #fff;
+        }
+
+        &:hover {
+            background: linear-gradient(125deg, transparent 30px, rgba(255, 255, 255, .9) 0);
+
+            .icon {
+                fill: #282A30;
+            }
+
+            .info-block__title {
+                color: #282A30;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 37px;
+        margin-bottom: 14px;
+    }
+
+    &__descript {
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        color: #878787;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 195px;
+    }
+}
