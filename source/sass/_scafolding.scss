@@ -1,78 +1,78 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #2B2D33;
+  background-color: #E5E5E5;
+  font-size: 16px;
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1520px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+}
+
+
+@mixin titleWithLine {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #2B2D33;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #cecdcd;
+    right: 0;
+    top: calc(50% - 1px);
+    width: 100%;
+    max-width: 1129px;
+    height: 1px;
+    z-index: -1;
   }
-  
-  body {
-    font-family: 'Gilroy', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #2B2D33;
-    background-color: #E5E5E5;
-    font-size: 16px;
-    position: relative;
+}
+
+@mixin MobileTitleWithLine {
+  font-size: 19px;
+  line-height: 22px;
+
+  &::after {
+    max-width: 150px;
   }
-  
-  .wrapper {
-    max-width: 1520px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-  }
-  
-  img {
-    display: block;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  ul {
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style: none;
-  }
-  
-  .button {
-    cursor: pointer;
-    border: none;
-  }
-  
-  
-  @mixin titleWithLine {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-    color: #2B2D33;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: relative;
-    z-index: 1;
-  
-    &::after {
-      content: "";
-      position: absolute;
-      border-bottom: 1px solid #cecdcd;
-      right: 0;
-      top: calc(50% - 1px);
-      width: 100%;
-      max-width: 1129px;
-      height: 1px;
-      z-index: -1;
-    }
-  }
-  
-  @mixin MobileTitleWithLine {
-    font-size: 19px;
-    line-height: 22px;
-  
-    &::after {
-      max-width: 150px;
-    }
-  }
-  
-  ::-webkit-scrollbar {width: 12px;height: 12px;}
-  ::-webkit-scrollbar-track-piece {background:rgba(0,0,0,0);}
-  ::-webkit-scrollbar-thumb:vertical {height:10px;background:#282A30;}
-  ::-webkit-scrollbar-thumb:vertical:hover {background:#D7423B;}
+}
+
+::-webkit-scrollbar {width: 12px;height: 12px;}
+::-webkit-scrollbar-track-piece {background:rgba(0,0,0,0);}
+::-webkit-scrollbar-thumb:vertical {height:10px;background:#282A30;}
+::-webkit-scrollbar-thumb:vertical:hover {background:#D7423B;}

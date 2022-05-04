@@ -646,7 +646,7 @@
                             position: relative;
                         }
 
-                        .parent:hover {
+                        .parent.parent__active {
                             &::after {
                                 border: solid #fff;
                                 border-width: 0 1px 1px 0;
@@ -660,8 +660,8 @@
                                 background: #585858;
                                 width: 220px;
 
-                                li {
-                                    &:hover::after {
+                                li.child__active {
+                                    &::after {
                                         top: 30px;
                                         transform: rotate(225deg);
                                         z-index: 11;
@@ -670,7 +670,7 @@
                             }
                         }
 
-                        .nav-child>.parent:hover>.nav-child {
+                        .nav-child>.parent.child__active>.nav-child {
                             display: block;
                             background: #fff;
 
@@ -678,7 +678,7 @@
                                 color: #282A30;
                             }
 
-                            li:hover::after {
+                            li.child__active::after {
                                 transform: rotate(225deg);
                             }
                         }
@@ -699,7 +699,8 @@
                             top: calc(50% - 4px);
                         }
 
-                        &>.parent:hover {
+                        &>.parent.parent__active,
+                        &.parent.child__active {
                             &::after {
                                 transform: rotate(225deg);
                                 top: 30px;
@@ -721,6 +722,20 @@
                             li {
                                 padding-left: 0;
                                 padding-right: 26px;
+                            }
+                        }
+                        .parent>.nav-child>.parent>.nav-child>.parent.parent__active {
+                            &::after {
+                                transform: rotate(225deg);
+                                top: 30px;
+                            }
+                        }
+                        .parent>.nav-child>.parent>.nav-child>.parent__active>.nav-child {
+                            background: #585858;
+                            display: block;
+
+                            li > a {
+                                color: #fff;
                             }
                         }
                     }
