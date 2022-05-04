@@ -734,6 +734,129 @@
     }
 }
 
+.form-block {
+    position: relative;
+    padding-top: 93px;
+    padding-bottom: 95px;
+    background: url('../images/main/form-bg-img.png') no-repeat -20px /contain, 
+    url('../images/main/form-bg.png') center/cover no-repeat #fff;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+    }
+
+    &::before {
+        background: url('../images/main//lines-red-form.svg') no-repeat;
+        width: 650px;
+        height: 585px;
+        top: 0;
+        left: 176px;
+    }
+
+    &::after {
+        background: url('../images/main/lines-black.svg') no-repeat;
+        width: 356px;
+        height: 585px;
+        top: 0;
+        right: 0;
+    }
+
+    .wrapper.wrapper-small {
+        max-width: 1275px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+
+        .form-block__images {
+            position: absolute;
+            z-index: -1;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+        }
+
+        &::before {
+            background: url('../images/main/man.png') no-repeat;
+            width: 462px;
+            height: 628px;
+            top: -43px;
+        }
+
+        &::after {
+            background: url('../images/main/label.svg') no-repeat center/auto;
+            width: 215px;
+            height: 215px;
+            width: 215px;
+            height: 215px;
+            bottom: 70px;
+            left: 740px;
+        }
+    }
+
+    .form-box {
+        max-width: 486px;
+        width: 100%;
+        margin-left: auto;
+    }
+
+    .form-box__title {
+        margin-top: 0;
+        margin-bottom: 46px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #FFFFFF;
+    }
+    
+    .form {
+        .input {
+            display: block;
+            width: 100%;
+            padding-left: 22px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 10px;
+            border: 1px solid #fff;
+        }
+
+        .input {
+            margin-bottom: 12px;
+        }
+
+        .input.textarea {
+            margin-bottom: 34px;
+            height: 120px;
+            resize: none;
+        }
+
+        .input::placeholder {
+            font-size: 14px;
+            line-height: 100%;
+            color: #959596;
+        }
+
+        .input:focus {
+            outline-color: #282A30;
+        }
+
+        .popular__show-all {
+            margin-left: inherit;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+    }
+}
+
 @media (max-width: 1600px) {
     .main-screen {
     
