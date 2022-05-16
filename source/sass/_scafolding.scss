@@ -7,7 +7,7 @@ body {
   font-style: normal;
   font-weight: normal;
   color: #2B2D33;
-  background-color: #E5E5E5;
+  background-color: #fff;
   font-size: 16px;
   position: relative;
 }
@@ -39,21 +39,58 @@ ul {
   border: none;
 }
 
-
-@mixin titleWithLine {
+@mixin mainTitle {
+  font-family: 'Gilroy', sans-serif;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
-  color: #2B2D33;
+  font-size: 36px;
+  line-height: 43px;
+  color: #FFFFFF;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-  z-index: 1;
 
   &::after {
     content: "";
     position: absolute;
-    border-bottom: 1px solid #cecdcd;
+    border-bottom: 3px solid #FF8000;
+    width: 100px;
+    left: calc(50% - 50px);
+    bottom: -2px;
+  }
+}
+
+
+@mixin titleWithLine {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #6F8287;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 26px;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border: solid #FF8000;
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    transform: rotate(315deg);
+    left: 0;
+    top: calc(50% - 7px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #E6E6E6;
     right: 0;
     top: calc(50% - 1px);
     width: 100%;
@@ -72,7 +109,26 @@ ul {
   }
 }
 
+.section-border {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    top: 100px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-border {
+    &::before {
+      top: 87px;
+    }
+  }
+}
+
 ::-webkit-scrollbar {width: 12px;height: 12px;}
 ::-webkit-scrollbar-track-piece {background:rgba(0,0,0,0);}
-::-webkit-scrollbar-thumb:vertical {height:10px;background:#282A30;}
-::-webkit-scrollbar-thumb:vertical:hover {background:#D7423B;}
+::-webkit-scrollbar-thumb:vertical {height:10px;background:#96A7B1;}
+::-webkit-scrollbar-thumb:vertical:hover {background:#FF8000;}

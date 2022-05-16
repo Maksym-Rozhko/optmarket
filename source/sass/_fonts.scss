@@ -4,6 +4,7 @@
          url('../fonts/gilroy-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
          url('../fonts/gilroy-medium-webfont.woff') format('woff');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -20,6 +22,7 @@
          url('../fonts/gilroy-semibold-webfont.woff') format('woff');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -28,6 +31,7 @@
          url('../fonts/gilroy-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -36,4 +40,41 @@
          url('../fonts/gilroy-extrabold-webfont.woff') format('woff');
     font-weight: 800;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswaldbold.woff2') format('woff2'),
+         url('../fonts/Oswaldbold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswaldmedium.woff2') format('woff2'),
+         url('../fonts/Oswaldmedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/arialbd.woff2') format('woff2'),
+         url('../fonts/arialbd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/arial.woff2') format('woff2'),
+         url('../fonts/arial.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
