@@ -1,0 +1,61 @@
+div[aria-label="Breadcrumbs"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 69px;
+}
+  
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+  
+    & > li:first-child {
+        display: none;
+    }
+  
+    & > li {
+        font-size: 12px;
+        line-height: 140%;
+        position: relative;
+        width: initial;
+    }
+    
+    & > li:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    & > li > a,
+    & > li > span {
+        font-size: 12px;
+        line-height: 140%;
+        color: #9C9C9C;
+        text-decoration: none;
+    }
+
+    & > li > a.pathway {
+        color: #FF8000;
+    }
+  
+    & > li:hover > a {
+        border-bottom: 1px solid #FF8000;
+    }
+
+    & > li > .divider::before {
+        content: "/";
+        font-size: 14px;
+        line-height: 140%;
+        color: #FF8000;
+        position: absolute;
+        top: calc(50% - 9px);
+        right: -10px;
+    }
+
+    & > li > span>img {
+        display: none;
+    }
+}
