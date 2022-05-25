@@ -1,0 +1,344 @@
+.filter-container {
+    .filter-title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #2B2D33;
+        margin-top: 0;
+        margin-bottom: 43px;
+        position: relative;
+
+        &--icon {
+            padding-left: 32px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url('../images/icons/filter.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 22px;
+                height: 18px;
+                left: 0;
+                top: calc(50% - 11px);
+            }
+        }
+    }
+    
+
+    .uf_wrapper_prices {
+        padding-bottom: 31px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #E8E8E8;
+        padding-right: 40px;
+
+        .uf_label_prices {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #2B2D33;
+            margin-bottom: 26px;
+            border: none;
+            background: transparent;
+        }
+
+        .uf_options_input {
+            .uf_trackbar_inputs {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .uf_options_input input {
+            border: 1px solid #D2D2D2;
+            padding: 14px 26px;
+            max-width: 115px;
+            font-size: 14px;
+            line-height: 16px;
+            color: #282A30;
+            outline-color: #ff8000;
+        }
+
+        .uf_inputreset {
+            background: #6F8287;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            border: none;
+            z-index: 1;
+        }
+    }
+
+    .attributes-container {
+        margin-bottom: 26px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #E8E8E8;
+
+        &__label {
+            border: none;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            margin-bottom: 26px;
+            cursor: pointer;
+        }
+
+        .uf_options {
+            border: none;
+        }
+
+        &__title {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #2B2D33;
+            margin-left: 10px;
+            display: block;
+        }
+        .checkboxes {
+            display: flex;
+            align-items: center;
+            background: transparent;
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+
+            & > input {
+                display: none;
+            }
+
+            .uf_input_label {
+                font-size: 14px;
+                line-height: 16px;
+                color: #2B2D33;
+                margin-right: 5px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+
+                .checkboxes-mark {
+                    background-color: #FFFFFF;
+                    width: 17px;
+                    height: 17px;
+                    position: relative;
+                    margin-right: 14px;
+    
+                    &::before {
+                        position: absolute;
+                        background-image: url('../images/icons/filter-check.svg');
+                        width: 11px;
+                        height: 11px;
+                        background-repeat: no-repeat;
+                        right: 0;
+                        top: 2px;
+                    }
+                }
+            }
+
+            .uf_count {
+                color: #9C9C9C;
+            }
+
+            & > input:checked + .uf_input_label .checkboxes-mark::before {
+                content: "";
+            }
+        }
+
+        .uf_select_options.chzn-container-multi {
+            .chzn-choices {
+                padding: 0;
+            }
+        }
+    }
+
+    .category-links {
+        display: flex;
+        flex-direction: column;
+
+        &__link {
+            font-size: 14px;
+            line-height: 16px;
+            text-decoration-line: underline;
+            color: #2B2D33;
+            transition: all ease-in-out .4s;
+
+            &:hover {
+                color: #ff8000;
+                text-decoration-color: #ff8000;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.sorting-filter {
+    margin-bottom: 35px;
+
+    .form_sort_count {
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid #E8E8E8;
+            max-width: 1132px;
+            width: 100%;
+            left: 0;
+            top: 50%;
+        }
+    }
+
+    .block_sorting_count_to_page {
+        display: flex;
+        justify-content: flex-end;
+        .control-group.box_products_sorting {
+            align-items: center;
+        }
+        .control-label {
+            font-size: 12px;
+            line-height: 150%;
+            color: #9C9C9C;
+            width: 100%;
+            text-transform: uppercase;
+        }
+        .inputbox {
+            border: 1px solid #D2D2D2;
+            padding: 11px 20px;
+            min-width: 212px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        .controls {
+            position: relative;
+            margin-left: 40px;
+            margin-right: 0;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: #282A30;
+                top: 2px;
+                right: 2px;
+                width: 12px;
+                height: 12px;
+                background-color: transparent;
+                -webkit-box-shadow: inset 2px -2px #282A30;
+                box-shadow: inset 2px -2px #282A30;
+                transform: rotate(-46deg);
+                right: 20px;
+                top: calc(50% - 10px);
+                z-index: 1;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .sorting-filter {
+        .form_sort_count {
+            &::before {
+                max-width: 950px;
+            }
+        }
+        .block_sorting_count_to_page {
+            .control-label {
+                font-size: 10px;
+            }
+            .controls {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .sorting-filter {
+        .form_sort_count {
+            &::before {
+                max-width: 770px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .sorting-filter {
+        .form_sort_count {
+            &::before {
+                max-width: 600px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .sorting-filter {
+        .form_sort_count {
+            &::before {
+                max-width: 400px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .sorting-filter {
+        .form_sort_count {
+            &::before {
+                max-width: 293px;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .sorting-filter {
+        .form_sort_count {
+            &::before {
+                max-width: 184px;
+            }
+        }
+    }
+    .filter-container {
+        .uf_wrapper_prices {
+            padding-right: 15px;
+        }
+        .uf_wrapper_prices {    
+            .uf_options_input input {
+                padding: 12px 10px;
+                max-width: 75px;
+            }
+            .uf_inputreset {
+                width: 25px;
+                padding: 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .sorting-filter {
+        .form_sort_count {
+            &::before {
+                content: none;
+            }
+        }
+        .block_sorting_count_to_page {
+            .inputbox {
+                min-width: 202px;
+            }
+        }
+    }
+}
