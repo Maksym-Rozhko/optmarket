@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>
+        optmarket
+    </title>
+</head>
+<body class="main">
+    <header class="header">
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="header-top__container">
+                    <div class="first-line">
+                        <a href="/" class="logo-link">
+                            <img src="images/main/logo.png" alt="logo: Такелаж опт-маркет">
+                        </a>
+                        <div class="address-group"> 
+                            <span class="address-group__text">г. Одесса,</span>
+                            <span class="address-group__text">Новомосковская дорога 23/1,</span>
+                            <span class="address-group__text">склад №4</span>
+                        </div>
+                        <div class="phones-group">
+                            <a href="tel:+380735375787" class="phones-group__tel">
+                                +380 (73) 537-57-87
+                            </a>
+                            <a href="tel:+380955375787" class="phones-group__tel">
+                                +380 (95) 537-57-87
+                            </a>
+                        </div>
+                        <div class="switch_lange">
+                            <div class="lang_block">
+                                <div class="lang_active">
+                                    RU
+                                </div>
+                                <ul class="lang_dropdown">
+                                    <li>
+                                        <a href="#">
+                                            UA
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="basket">
+                            <div class="basket__images">
+                                <img src="images/icons/shopping-cart.svg" alt="icon: shopping basket">
+                                <div class="basket__counter">
+                                    <span class="counter">1</span>
+                                </div>
+                            </div>
+                            <div class="basket__price">
+                                12.345 грн
+                            </div>
+                        </a>
+                    </div>
+                    <div class="second-line">
+                        <div class="burger-menu">
+                            <span class="burger-menu__line"></span>
+                        </div>
+                        <h2 class="large-title">
+                            <span class="title-parts title-parts--margin">
+                                Продукция со склада
+                            </span>
+                            <span class="title-parts">
+                                Доставка по Украине
+                            </span>
+                        </h2>
+                        <div class="search">
+                            <input type="text" class="input-search" placeholder="Поиск по сайту">
+                            <button type="button" class="button button-search">
+                                <img src="images/icons/lupa.svg" alt="icon: search-lupa">
+                            </button>
+                        </div>
+                        <button type="button" class="button btn-main">
+                            <svg class="icon">
+                                <use href="images/sprites.svg#phone"></use>
+                            </svg>
+                            Заказать звонок
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="wrapper">
+                <nav class="products-catalog">
+                    <ul class="menu menu-products">
+                        <li>
+                            <a href="#">
+                                <img src="images/icons/home-page.svg" alt="Главная страница">
+                            </a>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Стропы</a>
+                            <ul class="nav-child">
+                                <li class="parent">
+                                    <a href="#">
+                                        Текстильные
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Петлевые</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Кольцевые</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1СТ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2СТ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4СТ</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        Цепные
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">1СЦ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2СЦ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3СЦ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4СЦ</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        Канатные
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Петлевые</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Кольцевые</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        Ленты
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Для стропов</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Тросы</a>
+                            <ul class="nav-child">
+                                <li>
+                                    <a href="#">ПР</a>
+                                </li>
+                                <li>
+                                    <a href="#">ПРШ</a>
+                                </li>
+                                <li>
+                                    <a href="#">ПРПЛ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Ленты</a>
+                            <ul class="nav-child">
+                                <li>
+                                    <a href="#">Буксировочная</a>
+                                </li>
+                                <li>
+                                    <a href="#">Для стропов</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Электроды</a>
+                        </li>
+                        <li>
+                            <a href="#">Фанера</a>
+                        </li>
+                        <li>
+                            <a href="#">Канаты стальные</a>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Такелаж</a>
+                            <ul class="nav-child">
+                                <li>
+                                    <a href="#">Зажим</a>
+                                </li>
+                                <li>
+                                    <a href="#">Талрепы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Шплинт с кольцом</a>
+                                </li>
+                                <li>
+                                    <a href="#">Крюк чалочный 320С</a>
+                                </li>
+                                <li>
+                                    <a href="#">Крюк чалочный 320A</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Стяжные ремни</a>
+                            <ul class="nav-child">
+                                <li>
+                                    <a href="#">Стяжные ремни СР</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стяжные ремни СРК</a>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Комлектующие для стяжных ремней</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Храповые механизмы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Крюки J-образные</a>
+                                        </li>
+                                        <li class="parent">
+                                            <a href="#">Ленты</a>
+                                            <ul class="nav-child">
+                                                <li>
+                                                    <a href="#">Буксировочная</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Грузоподьемное</a>
+                            <ul class="nav-child">
+                                <li>
+                                    <a href="#">Тали ручные</a>
+                                </li>
+                                <li>
+                                    <a href="#">Тали эл</a>
+                                </li>
+                                <li>
+                                    <a href="#">Роклы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Штабелеры</a>
+                                </li>
+                                <li>
+                                    <a href="#">Монтажнотяговые механизмы</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="header-mobile-menu">
+            <div class="wrapper">
+                <div class="mobile-container">
+                    <nav class="products-catalog">
+                        <ul class="menu menu-products">
+                            <li>
+                                <a href="#">
+                                    <img src="images/icons/home-page.svg" alt="Главная страница">
+                                </a>
+                            </li>
+                            <li class="parent">
+                                <a href="#">Стропы</a>
+                                <ul class="nav-child">
+                                    <li class="parent">
+                                        <a href="#">
+                                            Текстильные
+                                        </a>
+                                        <ul class="nav-child">
+                                            <li>
+                                                <a href="#">Петлевые</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Кольцевые</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">1СТ</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2СТ</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">4СТ</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <a href="#">
+                                            Цепные
+                                        </a>
+                                        <ul class="nav-child">
+                                            <li>
+                                                <a href="#">1СЦ</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2СЦ</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">3СЦ</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">4СЦ</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <a href="#">
+                                            Канатные
+                                        </a>
+                                        <ul class="nav-child">
+                                            <li>
+                                                <a href="#">Петлевые</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Кольцевые</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <a href="#">
+                                            Ленты
+                                        </a>
+                                        <ul class="nav-child">
+                                            <li>
+                                                <a href="#">Для стропов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#">Тросы</a>
+                                <ul class="nav-child">
+                                    <li>
+                                        <a href="#">ПР</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ПРШ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ПРПЛ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#">Ленты</a>
+                                <ul class="nav-child">
+                                    <li>
+                                        <a href="#">Буксировочная</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Для стропов</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Электроды</a>
+                            </li>
+                            <li>
+                                <a href="#">Фанера</a>
+                            </li>
+                            <li>
+                                <a href="#">Канаты стальные</a>
+                            </li>
+                            <li class="parent">
+                                <a href="#">Такелаж</a>
+                                <ul class="nav-child">
+                                    <li>
+                                        <a href="#">Зажим</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Талрепы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Шплинт с кольцом</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Крюк чалочный 320С</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Крюк чалочный 320A</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#">Стяжные ремни</a>
+                                <ul class="nav-child">
+                                    <li>
+                                        <a href="#">Стяжные ремни СР</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Стяжные ремни СРК</a>
+                                    </li>
+                                    <li class="parent">
+                                        <a href="#">Комлектующие для стяжных ремней</a>
+                                        <ul class="nav-child">
+                                            <li>
+                                                <a href="#">Храповые механизмы</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Крюки J-образные</a>
+                                            </li>
+                                            <li class="parent">
+                                                <a href="#">Ленты</a>
+                                                <ul class="nav-child">
+                                                    <li>
+                                                        <a href="#">Буксировочная</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#">Грузоподьемное</a>
+                                <ul class="nav-child">
+                                    <li>
+                                        <a href="#">Тали ручные</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Тали эл</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Роклы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Штабелеры</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Монтажнотяговые механизмы</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="contacts-info">
+                        <h2 class="large-title">
+                            <span class="title-parts title-parts--margin">
+                                Продукция со склада
+                            </span>
+                            <span class="title-parts">
+                                Доставка по Украине
+                            </span>
+                        </h2>
+                        <div class="address-group"> 
+                            <span class="address-group__text">г. Одесса,</span>
+                            <span class="address-group__text">Новомосковская дорога 23/1,</span>
+                            <span class="address-group__text">склад №4</span>
+                        </div>
+                        <div class="phones-group">
+                            <a href="tel:+380735375787" class="phones-group__tel">
+                                +380 (73) 537-57-87
+                            </a>
+                            <a href="tel:+380955375787" class="phones-group__tel">
+                                +380 (95) 537-57-87
+                            </a>
+                        </div>
+                        <div class="switch_lange">
+                            <div class="lang_block">
+                                <div class="lang_active">
+                                    RU
+                                </div>
+                                <ul class="lang_dropdown">
+                                    <li>
+                                        <a href="#">
+                                            UA
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button type="button" class="button btn-main">
+                            <svg class="icon">
+                                <use href="images/sprites.svg#phone"></use>
+                            </svg>
+                            Заказать звонок
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-screen">
+        <div class="wrapper">
+            <div class="main-screen__container">
+                <div class="main-screen__banner">
+                    <img src="images/main/banner.jpg" alt="Продукция со склада - Доставка по Украине">
+                </div>
+                <div class="main-screen__navbar">
+                    <h3 class="navbar-title">
+                        Информация
+                    </h3>
+                    <nav class="nav">
+                        <ul class="menu">
+                            <li class="active"><a href="/">Доставка</a></li>
+                            <li><a href="/">Виды оплаты</a></li>
+                            <li><a href="/">Наши контакты</a></li>
+                            <li><a href="/">О нашей компании</a></li>
+                            <li><a href="/">Блог</a></li>
+                        </ul>
+                    </nav>
+                    <div class="navbar__info-box">
+                        Не нашли нужный товар? 
+                        Хотите особые условия? 
+                        Звоните нам!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="category-page">
+        <div class="category-screen section-border">
+            <div class="wrapper">
+                <h2 class="main-title">
+                    Строп текстильные
+                </h2>
+                <div aria-label="Breadcrumbs" role="navigation">
+                    <ul itemscope="" itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"> 
+                        <li> Вы здесь: &nbsp; </li> 
+                        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"> 
+                            <a itemprop="item" href="/" class="pathway">
+                                <span itemprop="name">Главная</span>
+                            </a> 
+                            <span class="divider"></span>
+                        </li> 
+                        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"> 
+                            <a itemprop="item" href="/" class="pathway">
+                                <span itemprop="name">Стропы</span>
+                            </a> 
+                            <span class="divider"></span>
+                        </li> 
+                        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="active"> 
+                            <span itemprop="name"> Строп текстильные </span>
+                        </li> 
+                    </ul> 
+                </div>
+                <div class="choose-category">
+                    <div class="choose-category__container">
+                        <a href="#"  class="choose-category__link">
+                            <img src="images/main/cat-slings.png" alt="Стропы текстильные">
+                            <span href="#" class="choose-category__label">
+                                Строп текстильный кольцевой СТК
+                            </span>
+                        </a>
+                        <a href="#"  class="choose-category__link">
+                            <img src="images/main/cat-hawser.png" alt="Стропы цепные">
+                            <span href="#" class="choose-category__label">
+                                Строп текстильный петлевой СТП
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="category-page-content">
+        <div class="wrapper">
+            <div class="category-content">
+                <p class="category-text">
+                    <span class="category-text__accent">Строп текстильный</span>
+                    представляет собой специальное приспособление из ленты тканого типа. 
+                    Характерными отличиями таких приспособлений являются высокая прочность и гибкость. 
+                    Такие свойства позволяют фиксировать грузы разных размеров и формы, не повреждая и не 
+                    деформируя их. Различают кольцевые и петлевые стропы. В первом случае груз обвязывается 
+                    самим стропом, а во втором для его закрепления используются специальные петли на концах. 
+                    Для большей надежности петли укрепляются  при помощи защитных накладок из полиэстера.
+                </p>
+                <div class="video-block__video">
+                    <div class="video">
+                        <a href="https://www.youtube.com/embed/u5uVuGgIBto" class="video__link">
+                            <img class="video__media" src="https://i.ytimg.com/vi/u5uVuGgIBto/maxresdefault.jpg" alt="Такелажное оборудование видео">
+                        </a>
+                        <button class="video__button">
+                            <img src="images/icons/btn-play-arrow.svg" alt="icon: btn-play">
+                        </button>
+                    </div>
+                </div>
+                <h3 class="category-title">
+                    Чем удобен строп текстильный и где его используют
+                </h3>
+                <p class="category-text">
+                    Необходимость купить стропы текстильные возникает при перемещении или подъеме/спуске 
+                    крупногабаритных грузов, во время строительно-монтажных работ, а также в некоторых случаях 
+                    при садовых и бытовых работах.
+                </p>
+                <h5 class="category-title__list">
+                    По сравнению со стропами из металла, текстильные имеют ряд преимуществ:
+                </h5>
+                <ul class="category-list">
+                    <li class="category-list__item">
+                        меньший вес – это увеличивает скорость перемещения по стройплощадке, 
+                        прикрепление к крюку крана и связывание самого груза;
+                    </li>
+                    <li class="category-list__item">
+                        сохранность груза – благодаря мягкости текстиля груз безопасно, но плотно 
+                        обвязывается по периметру и не повреждается в процессе транспортировки;
+                    </li>
+                    <li class="category-list__item">
+                        устойчивость к различным деформациям – многочисленные сгибания и разгибания 
+                        приводят к утрате качеств металлических строп и их постепенному разрушению, 
+                        тогда как стропы из текстиля не боятся таких нагрузок  ввиду своей эластичности;
+                    </li>
+                    <li class="category-list__item">
+                        износостойкость – текстиль, в отличие от металла не боится коррозии, перепада 
+                        температур и ряда других внешних факторов.  
+                    </li>
+                </ul>
+                <p class="category-text">
+                    Прежде чем купить стропа текстильные, необходимо тщательно осмотреть товар. Не следует брать 
+                    изделия с заметными дефектами, даже если они кажутся незначительными, поскольку это может 
+                    привести к непредвиденным последствиям. Кроме того, необходимо выбирать стропы под грузы 
+                    определенного веса, не превышая его во время эксплуатации. При хранении строп, желательно 
+                    предохранить их от воздействия влаги, высокой или низкой температуры, а также химических веществ.
+                </p>
+                <h3 class="category-title category-title--margin-t">
+                    Где лучше купить стропы текстильные
+                </h3>
+                <p class="category-text">
+                    Заказать <span class="category-text__accent">стропы текстильные в Одессе</span>
+                    по доступной цене можно в интернет-магазине ОПТ МАРКЕТ. 
+                    Для этого достаточно связаться с нашим менеджером по телефону, который указан на нашем сайте, 
+                    или же воспользоваться удобным вам мессенджером. Также вы можете задать нам любые вопросы 
+                    относительно применения строп, их характеристик и классификации.
+                </p>
+                <p class="category-text">
+                    Стропы текстильные заказать стоит для дальнейшего использования на различных предприятиях и в 
+                    ряде компаний. Они потребуются и частным пользователям, имеют широкую сферу применения. 
+                    Изделия изготовлены из качественных материалов и отличаются прекрасными техническими 
+                    характеристиками. Их преимуществом станет продолжительный срок службы, универсальность, 
+                    применение зависит только от ваших потребностей. Но где стоит стропы текстильные купить вам? 
+                    Лучше сделать это на специализированном сайте. Просмотреть каталог вы сможете на нашем ресурсе, 
+                    сэкономив средства на покупке.
+                </p>
+                <h3 class="category-title category-title--margin-t">
+                    Для чего необходимо стропы текстильные купить вам?
+                </h3>
+                <span class="list-title">
+                    В последнее время данные изделия нашли широкое применение в различных сферах. 
+                    Перечислим только несколько основных вариантов:
+                </span>
+                <ul class="category-list">
+                    <li class="category-list__item">
+                        Использование на складах для перемещения грузов.
+                    </li>
+                    <li class="category-list__item">
+                        В сельском хозяйстве.
+                    </li>
+                    <li class="category-list__item">
+                        В нефтяной промышленности.
+                    </li>
+                    <li class="category-list__item">
+                        В строительстве.
+                    </li>
+                    <li class="category-list__item">
+                        При оснащении различного оборудования.
+                    </li>
+                    <li class="category-list__item">
+                        Эти изделия используются и автомобилистами для буксировки транспортных средств.
+                    </li>
+                </ul>
+                <p class="category-text">
+                    <span class="category-text__accent">Купить стропы текстильные оптом</span>
+                    – значит получить универсальное оснащение с широкими возможностями дальнейшего использования. 
+                    Но важно учитывать и множество других факторов, чтобы правильно сделать выбор. Эти изделия 
+                    представлены в нескольких видах, в зависимости от применения и задач.
+                </p>
+                <p class="category-text">
+                    <span class="category-text__accent">Петлевые стропы текстильные от производителя</span>
+                </p>
+                <p class="category-text">
+                    Заказывая стропы текстильные со склада, обратите внимание на петлевые модели. 
+                    На двух сторонах расположены петли, с их помощью происходит фиксация на оборудовании 
+                    и подвешивается стальной крюк. Они используются в большом количестве грузоподъемной 
+                    техники и способны справиться с любыми задачами. 
+                    <a href="#" class="category-link">Петлевые</a> стропы отличаются по количеству 
+                    ветвей, с помощью которых осуществляется крепление грузов. Их может быть от одной до 
+                    четырех, в продаже представлены соответствующие изделия. Обычно ветви фиксируются на 
+                    общей скобе, такое решение позволяет повысить общую прочность конструкции.
+                </p>
+                <h3 class="category-title category-title--margin-t">
+                    Кольцевые стропы текстильные в интернет-магазине
+                </h3>
+                <p class="category-text">
+                    <a href="#" class="category-link">Кольцевые изделия</a>
+                    тоже пользуются спросом среди покупателей. В них две части соединены вместе, в результате 
+                    создается кольцо для дальнейшего применения. Такая конструкция пользуется повышенной 
+                    популярностью и имеет ряд преимуществ. При помощи кольцевых строп можно полноценно перемещать 
+                    различные грузы. Они обхватывают конструкцию, позволяют упростить данный процесс. 
+                    Это оснащение прекрасно подходит для хрупких предметов или тех элементов, которые невозможно 
+                    транспортировать с применением петлевых строп.
+                </p>
+                <h3 class="category-title category-title--margin-t">
+                    Стропы текстильные – цена и изготовление
+                </h3>
+                <span class="list-title">
+                    Для изготовления данной продукции обычно используются ленты из полиэстера. Это 
+                    синтетический материал, и он имеет массу преимуществ перед натуральными волокнами:
+                </span>
+                <ul class="category-list">
+                    <li class="category-list__item">
+                        Обладает высоким уровнем прочности.
+                    </li>
+                    <li class="category-list__item">
+                        Не боится влаги и перепадов температур.
+                    </li>
+                    <li class="category-list__item">
+                        Имеет некоторую степень эластичности.
+                    </li>
+                    <li class="category-list__item">
+                        Долговечен и в течение продолжительного времени сохраняет основные характеристики.
+                    </li>
+                </ul>
+                <p class="category-text">
+                    На стропы текстильные цена достаточно невысока. Они просты в изготовлении, используются 
+                    надежные и доступные материалы. Поэтому стоимость изделий оправдана, вы сможете полноценно 
+                    пользоваться ими в дальнейшем, Вы также можете заказать стропы канатные.
+                </p>
+                <h3 class="category-title category-title--margin-t">
+                    Стропы текстильные от производителя – отличный вариант
+                </h3>
+                <span class="list-title">
+                    Перечислим несколько преимуществ использования:
+                </span>
+                <ul class="category-list">
+                    <li class="category-list__item">
+                        Безопасность, можно пользоваться стропами без рукавиц, исключается получение повреждений.
+                    </li>
+                    <li class="category-list__item">
+                        Небольшой вес, эти элементы намного легче стальных тросов.
+                    </li>
+                    <li class="category-list__item">
+                        Компактность. Стропы можно сложить после применения и комфортно хранить, они не займут много места.
+                    </li>
+                    <li class="category-list__item">
+                        Обеспечивается сохранность грузов от повреждений.
+                    </li>
+                </ul>
+                <p class="category-text">
+                    Стропы текстильные от производителя обойдутся вам в небольшую сумму. При прямой 
+                    реализации товаров компания существенно сокращает собственные расходы. Удается 
+                    получить лучшие условия и сэкономить средства. Фирма гарантирует высокий уровень 
+                    качества изделий.
+                </p>
+                <h3 class="category-title category-title--margin-t">
+                    Просмотрите каталог текстильных строп
+                </h3>
+                <p class="category-text">
+                    Стропы текстильные интернет-магазин предлагает в большом ассортименте. Если вас заинтересовали 
+                    данные изделия, то достаточно зайти на наш сайт. В продаже представлены десятки различных 
+                    вариантов, и с выбором не возникнет проблем. Каталог текстильных строп очень удобен и прост 
+                    для пользователя. Вам не придется тратить время на изучение интерфейса, удается легко оформить 
+                    заказ. 
+                </p>
+                <div class="text-block">
+                    <p class="category-text">
+                        У нас вы можете купить СТРОПЫ ОДЕССА с доставкой от производителя в такие города как Киев, 
+                        Одесса, Винница, Харьков, Днепр (Днепропетровск), Житомир, Запорожье, Ивано-Франковск, 
+                        Кривой Рог, Кропивницкий, Луцк, Львов, Мариуполь, Николаев, Полтава, Ровно, Сумы, Тернополь, 
+                        Ужгород, Херсон, Хмельницкий, Черкассы, Чернигов, Черновцы и в любую точку Украины!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-block">
+        <div class="wrapper">
+            <div class="footer-block__container">
+                <div class="footer-block__item">
+                    <div class="block-logo">
+                        <a href="/" class="logo-link">
+                            <img src="images/main/logo-footer.png" alt="logo: Такелаж опт-маркет">
+                        </a>
+                        <p class="footer-block__text">
+                            <span class="accent">
+                                Интернет-магазин "ОптМаркет" является крупнейшим <br /> оператором грузоподъёмного оборудования и такелажа в Украине.
+                            </span>
+                            На нашем предприятии производятся: канатные, текстильные стропа различных длин, 
+                            конструкций и грузоподъемностей, а также широкий спектр буксировочных, стяжных и 
+                            автовозных ремней. Нашими стропами пользуются практически все крупные металлургические 
+                            заводы.
+                        </p>
+                    </div>
+                    <nav class="site-map">
+                        <h4 class="footer-block__title">
+                            Карта сайта:
+                        </h4>
+                        <ul class="site-map__list">
+                            <li class="site-map__item">
+                                <a href="#" class="site-map__link">О нас</a>
+                            </li>
+                            <li class="site-map__item">
+                                <a href="#" class="site-map__link">Доставка</a>
+                            </li>
+                            <li class="site-map__item">
+                                <a href="#" class="site-map__link">Блог</a>
+                            </li>
+                            <li class="site-map__item">
+                                <a href="#" class="site-map__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-block__item double-border-lines">
+                    <h4 class="footer-block__title">
+                        Контактные данные:
+                    </h4>
+                    <div class="clock-group">  
+                        <span class="clock-group__text">Пн - Пт: с 9:00 до 17:00.</span>
+                        <span class="clock-group__text">Сб, Вс - выходные</span>
+                    </div>
+                    <div class="address-group"> 
+                        <span class="address-group__text">г. Одесса,</span>
+                        <span class="address-group__text">Новомосковская дорога 23/1,</span>
+                        <span class="address-group__text">склад №4</span>
+                    </div>
+                    <a href="mailto:optmarketua@ukr.net" class="address-mail">optmarketua@ukr.net</a>
+                </div>
+                <div class="footer-block__item footer-block__item--padding">
+                    <h4 class="footer-block__title">
+                        Свяжитесь с нами:
+                    </h4>
+                    <div class="phones-group">
+                        <a href="tel:+380994579750" class="phones-group__tel">+38 (099) 457 97 50</a>
+                        <a href="tel:+380487262263" class="phones-group__tel ">+38 (048) 726 22 63</a>
+                        <a href="tel:+380730660466" class="phones-group__tel phones-group__tel--margin">+38 (073) 066 04 66</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__container">
+                <p class="footer-copyright">
+                    2005–2021 © ОПТ МАРКЕТ. 
+                    <span class="footer-copyright__text">Все права защищены.</span>
+                </p>
+                <button class="button scroll-top"></button>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
