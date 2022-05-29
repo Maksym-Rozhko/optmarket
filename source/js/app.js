@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     customVideoCreator();
     scrollToTop();
     burgerMenu();
+    accordionMenu();
   } catch (error) {
   }
 
@@ -125,6 +126,43 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTop: 550
       }, "slow");
       return false;
+    });
+  };
+
+  function accordionMenu() {
+    const productsCatalogParentLinks = document.querySelectorAll('.menu-products>.parent');
+    const productsCatalogChildLinks = document.querySelectorAll('.menu-products>.parent>.nav-child>.parent');
+    const productsCatalogLastChildLinks = document.querySelectorAll('.menu-products>.parent>.nav-child>.parent>.nav-child>.parent');
+
+    const productsCatalogRemoveAllLinks = () => {
+      productsCatalogParentLinks.forEach(item => item.classList.remove('parent__active'));
+      productsCatalogChildLinks.forEach(item => item.classList.remove('child__active'));
+      productsCatalogLastChildLinks.forEach(item => item.classList.remove('parent__active'));
+    }
+
+    productsCatalogParentLinks.forEach(elem => {
+      elem.addEventListener('click', () => {
+        if (elem.classList.contains('parent__active')) {
+          productsCatalogRemoveAllLinks();
+        } else {
+          productsCatalogRemoveAllLinks();
+          elem.classList.add('parent__active');
+        }
+      });
+    });
+
+    productsCatalogChildLinks.forEach(elem => {
+      elem.addEventListener('click', (e) => {
+        e.stopPropagation();
+        elem.classList.toggle('child__active');
+      });
+    });
+
+    productsCatalogLastChildLinks.forEach(elem => {
+      elem.addEventListener('click', (e) => {
+        e.stopPropagation();
+        elem.classList.toggle('parent__active');
+      });
     });
   };
 });
