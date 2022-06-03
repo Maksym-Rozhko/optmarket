@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
     accordionMenu();
     initSliders();
+    productPreviewImages();
   } catch (error) {
   }
 
@@ -163,6 +164,22 @@ document.addEventListener('DOMContentLoaded', () => {
       elem.addEventListener('click', (e) => {
         e.stopPropagation();
         elem.classList.toggle('parent__active');
+      });
+    });
+  };
+
+  function productPreviewImages() {
+    const previevDescript = document.querySelector('.slider-preview-img');
+    const slidesDescript = document.querySelectorAll('.product-descript__item');
+
+    function removeActiveSlides() { slidesDescript.forEach(slide => slide.classList.remove('active-slide')) };
+  
+    slidesDescript.forEach(slide => {
+      slide.addEventListener('click', () => {
+        removeActiveSlides();
+        previevDescript.src = slide.children[0].getAttribute('src');
+        previevDescript.alt = slide.children[0].getAttribute('alt');
+        slide.classList.add('active-slide');
       });
     });
   };
