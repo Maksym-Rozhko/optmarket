@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollToTop();
     burgerMenu();
     accordionMenu();
+    initSliders();
   } catch (error) {
   }
 
@@ -163,6 +164,48 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
         elem.classList.toggle('parent__active');
       });
+    });
+  };
+
+  function initSliders() {
+    const productDescriptSlider = new Swiper('.product-descript-slider.swiper-container', {
+      slidesPerView: 5,
+      slidePerGround: 1,
+      spaceBetween: 20,
+
+      breakpoints: {
+        320: {
+          slidesPerView: 5,
+          slidePerGround: 1,
+          spaceBetween: 10,
+        },
+        575: {
+          slidesPerView: 5,
+          slidePerGround: 1,
+          spaceBetween: 20,
+        },
+      }
+    }); 
+    const popularSlider = new Swiper('.popular-slider.swiper-container', {
+      slidesPerView: 4,
+      spaceBetween: 10,
+
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+          spaceBetween: 150,
+        },
+        675: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1000: {
+          slidesPerView: 3,
+        },
+        1400: {
+          slidesPerView: 4,
+        },
+      }
     });
   };
 });
