@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tabsHandler();
   } catch (error) {
   }
+  calcBAsketQuantity();
 
   const disableScroll = () => {
     const widthScroll = window.innerWidth - document.body.offsetWidth;
@@ -225,6 +226,26 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       }
     });
+  };
+
+  function calcBAsketQuantity() {
+    let cardsAmount = document.querySelectorAll('.quantity-box');
+    for (let counter of cardsAmount) {
+      counter.addEventListener('click', e => {
+        let target = e.target;
+        let container = e.currentTarget;
+        let counter = container.querySelectorAll('.inputbox')[0];
+        let count = parseInt(counter.getAttribute("data-count"));
+        
+        if (target.classList.contains('decrease')) {
+            count = count === 1 ? count : (count - 1);
+        } else if (target.classList.contains('increase')){
+            count += 1;
+        }
+        counter.setAttribute('data-count', count);
+        counter.value = count;
+      });
+    };
   };
 
   function tabsHandler() {
