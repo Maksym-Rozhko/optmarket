@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     accordionMenu();
     initSliders();
     productPreviewImages();
+    tabsHandler();
   } catch (error) {
   }
 
@@ -223,6 +224,55 @@ document.addEventListener('DOMContentLoaded', () => {
           slidesPerView: 4,
         },
       }
+    });
+  };
+
+  function tabsHandler() {
+    const tabsElems = document.querySelectorAll('.tabs__title');
+    const tabsContainerElems = document.querySelectorAll('.content__container');
+    const openReviewBtn = document.querySelector('.open-review-modal');
+
+    function tabContainerActive(tabData) {
+      tabsContainerElems.forEach(elem => {
+        let idContainer = elem.id;
+        tabData === idContainer ? elem.classList.add('container-active') : elem.classList.remove('container-active');
+      });
+    };
+    
+    tabsElems.forEach(tab => {
+      tab.addEventListener('click', () => {
+
+        let tabData = tab.dataset.title;
+
+        tabsElems.forEach(tab => tab.classList.remove('tab-active'));
+
+        tab.classList.add('tab-active');
+        tabContainerActive(tabData);
+      });
+    });
+
+    function activeTabForBtnReview(dataId) {
+      tabsElems.forEach(tab => {
+        let tabData = tab.dataset.title;
+        let id = dataId
+
+        tabData === id ? tab.classList.add('tab-active') : false;
+      });
+    }
+
+    openReviewBtn.addEventListener('click', () => {
+
+      tabsContainerElems.forEach(elem => {
+        const idContainer = elem.id;
+        const dataBtn = openReviewBtn.dataset.review;
+
+        tabsElems.forEach(tab => tab.classList.remove('tab-active'));
+
+        activeTabForBtnReview(dataBtn);
+        tabContainerActive(dataBtn);
+
+        idContainer === dataBtn ? elem.classList.add('container-active') : false;
+      });
     });
   };
 });
