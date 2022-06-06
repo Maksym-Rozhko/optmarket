@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     productPreviewImages();
     tabsHandler();
   } catch (error) {
+    popUp();
   }
   calcBAsketQuantity();
 
@@ -294,6 +295,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
         idContainer === dataBtn ? elem.classList.add('container-active') : false;
       });
+    });
+  };
+
+  function popUp() {
+    const btnOpenPopUpOrder = document.querySelectorAll('.callback-btn');
+    const btnPopUpCloseElem = document.querySelector('.pop-up__close');
+    const popUpOverflow = document.querySelector('.pop-up__overflow');
+    const allLabelsForm = document.querySelectorAll('.label');
+
+    const clearInputs = () => {
+        const allInputs = document.querySelectorAll('input:not(.uForm__extended)');
+        const allTextarea = document.querySelectorAll('textarea');
+        allInputs.forEach(input => input.value = '');
+        allTextarea.forEach(txtarea => txtarea.value = '');
+    };
+
+    const openPopUp = () => {
+        popUpOverflow.classList.add('pop-up__active');
+        document.addEventListener('keydown', escapeHandler);
+    };
+
+    const closePopUp = () => {
+        popUpOverflow.classList.remove('pop-up__active');
+        clearInputs();
+        allLabelsForm.forEach(label => label.classList.remove('label-focus'));
+        document.removeEventListener('keydown', escapeHandler);
+    };
+
+    const escapeHandler = e => {
+        e.code === 'Escape' ? closePopUp() : false;
+    }
+
+    btnPopUpCloseElem.addEventListener('click', () => {
+        closePopUp();
+    });
+
+    btnOpenPopUpOrder.forEach(btn => {
+        btn.addEventListener('click', () => {
+          openPopUp();
+        });
+    });
+
+    popUpOverflow.addEventListener('click', e => {
+        const target = e.target;
+        target.classList.contains('pop-up__close') || target === popUpOverflow ? closePopUp() : false;
     });
   };
 });
