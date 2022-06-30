@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tabsHandler();
   } catch (error) {
     popUp();
+    inputLabelsFocus();
   }
   calcBAsketQuantity();
 
@@ -340,6 +341,19 @@ document.addEventListener('DOMContentLoaded', () => {
     popUpOverflow.addEventListener('click', e => {
         const target = e.target;
         target.classList.contains('pop-up__close') || target === popUpOverflow ? closePopUp() : false;
+    });
+  };
+  
+  function inputLabelsFocus() {
+    const sectionFormBlock = document.querySelectorAll('.form');
+
+    sectionFormBlock.forEach(form => {
+        form.addEventListener('change', e => {
+            const target = e.target;
+            const label = target.labels[0];
+
+            label && target.value ? label.classList.add('label-focus') : label.classList.remove('label-focus');
+        });
     });
   };
 });
